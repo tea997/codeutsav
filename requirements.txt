@@ -3,7 +3,7 @@ Flask==3.0.3
 
 # --- Computer Vision ---
 opencv-python==4.11.0.86
-mediapipe==0.10.21
+mediapipe==0.10.14
 numpy==1.26.4
 
 # --- Utility Dependencies ---
@@ -12,3 +12,4 @@ absl-py==2.1.0
 
 # --- Optional (for cloud environments that need these for build) ---
 gunicorn==22.0.0
+
