@@ -4,6 +4,7 @@ import numpy as np
 import base64
 import mediapipe as mp  # Google's MediaPipe
 import time
+import os
 
 app = Flask(__name__)
 
@@ -258,4 +259,5 @@ def verify_liveness():
         return jsonify({"decision": "Decline", "message": str(e), "presence_percent": 0, "frames_analyzed": 0})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', debug=False, port=port)
