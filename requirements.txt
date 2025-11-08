@@ -1,26 +1,16 @@
-# ================================
-# Flask + MediaPipe + OpenCV App
-# Compatible with Render Deployment
-# ================================
-
-# --- Web Framework ---
+# --- Core Web Framework ---
 Flask==3.0.3
 
-# --- Core Computer Vision Stack ---
-opencv-python-headless==4.11.0.86    # OpenCV without GUI libs (Render-safe)
-mediapipe==0.10.21                  # Stable CPU-compatible version
-numpy==1.26.4                        # Safe with Mediapipe 0.10.x and Python 3.11
+# --- Computer Vision ---
+opencv-python-headless==4.11.0.86
+mediapipe==0.10.21
+numpy==1.26.4
 
-# --- MediaPipe Internal Dependencies ---
-protobuf==4.25.3                     # Prevents runtime_version import errors
-absl-py==2.1.0                       # Mediapipe logging + utilities
+# --- Utility Dependencies ---
+protobuf==4.25.8
+absl-py==2.1.0
 
-# --- Production Web Server ---
-gunicorn==22.0.0                     # WSGI server for deployment
+# --- Optional (for cloud environments that need these for build) ---
+gunicorn==22.0.0
 
-# --- Flask Core Dependencies (Pinned for Safety) ---
-Werkzeug==3.0.3
-click==8.1.7
-itsdangerous==2.2.0
-Jinja2==3.1.4
 
